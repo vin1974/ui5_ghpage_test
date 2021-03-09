@@ -1,0 +1,16 @@
+{
+  "generator-easy-ui5": {
+    "projectname": "routingTest",
+    "namespace": "vin.prj",
+    "platform": "Static webserver",
+    "viewtype": "XML",
+    "viewname": "App",
+    "ui5libs": "Content delivery network (SAPUI5)",
+    "newdir": true,
+    "namespaceURI": "vin/prj",
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}
