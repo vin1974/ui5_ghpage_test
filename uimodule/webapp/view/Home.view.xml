@@ -1,0 +1,21 @@
+<mvc:View 
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="vin.prj.routingTest.controller.Home">
+    <Shell>
+        <Page title="Home Page">
+            <Panel class='sapUiResponsiveMargin'>
+                <VBox>
+                    <Button text='Display Not Found Page'
+                        class="sapUiTinyMargin"
+                        press='.onNotFound' />
+                    <Button text="Employee List"
+                        class="sapUiTinyMargin"
+                        press='.onNavToEmployee' />
+
+                </VBox>
+            </Panel>
+        </Page>
+    </Shell>
+
+</mvc:View>

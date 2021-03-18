@@ -1,0 +1,58 @@
+ <mvc:View controllerName="vin.prj.routingTest.controller.Employee"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:f="sap.ui.layout.form"
+  xmlns:mvc="sap.ui.core.mvc">
+  <App id="Employee" >
+    <pages>
+      <Page title="Employee Detail - {north>FirstName} {north>LastName}"
+        showNavButton="true"
+        navButtonPress=".onNavBack">
+        <content>
+          <!-- <VBox>
+            <Text text="Good Morning..." />
+           <Text text="{north>FirstName} {north>LastName}" />
+             <Text text=">>>" />
+          </VBox> -->
+          <Panel id='employeePanel'
+            width='auto'
+            class='sapUiNoContentPadding'>
+            <headerToolbar>
+              <Toolbar>
+                <Title text='Employee ID: {north>EmployeeID}' />
+                <ToolbarSpacer />
+                <Link text="Flip to resume" 
+                  tooltip="resume"
+                  press=".onShowResume" />
+              </Toolbar>
+            </headerToolbar>
+            <content>
+              <f:SimpleForm editable='false'  
+                layout='ResponsiveGridLayout'
+                labelSpanM='2' emptySpanM='4' labelSpanL='2' emptySpanL='4'  
+                columnsL='1' columnsM='1'>
+                <f:content>
+                  <Label text='First Name' />
+                  <Text  text="{north>FirstName}" />
+                  <Label text="Last Name" />
+                  <Text text="{north>LastName}" />
+                  <Label text="Address" />
+                  <Text text="{north>Address}" />
+                  <Label text="From City" />
+                  <Text text="{north>Region}" />
+                  <Label text="Postal Code" />
+                  <Text text="{north>PostalCode}" />
+                  <Label text="Home Phone" />
+                  <Text text="{north>HomePhone}" />
+                  <Label text="Country" />
+                  <Text text="{north>Country}" />
+                </f:content>
+              </f:SimpleForm>
+            </content>
+          </Panel>
+          
+        </content>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>

@@ -52,10 +52,13 @@ sap.ui.define([
     },
 
     getRouter: function() {
+      // console.log('get router...')
       return UIComponent.getRouterFor(this);
     },
 
     onNavBack: function() {
+      // console.log('on...nav back...');
+      console.log('sPreviousHash:'+sPreviousHash)
       var sPreviousHash = History.getInstance().getPreviousHash();
 
       if (sPreviousHash !== undefined) {

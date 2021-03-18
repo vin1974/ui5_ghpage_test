@@ -1,0 +1,112 @@
+ <mvc:View controllerName="vin.prj.routingTest.controller.Resume"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  <App id="Resume" >
+    <pages>
+      <Page title="Resume of {north>FirstName} {north>LastName}"
+          showNavButton="true"
+          navButtonPress=".onNavBack">
+        <content>
+          <Panel class='sapUiResponsiveContentPadding'>
+            <content>       
+              <IconTabBar id='iconTabBar'
+                      headerBackgroundDesign="Transparent"
+                      select=".onTabSelect"
+                      selectedKey="{view>/selectedTabKey}"
+                      class="sapUiResponsiveContentPadding">
+                <items>
+                  <IconTabFilter id="infoTab" text='Info' key='Info' >
+                    <Text text="{north>Title}" />
+                  </IconTabFilter>
+                  <IconTabFilter id="projectsTab" text='Projects' key='Projects' >
+                    <Text text="{north>HireDate}" />
+                  </IconTabFilter>
+                  <IconTabFilter id="hobbiesTab" text='Hobbies' key='Hobbies' >
+                    <Text text="{north>HomePhone}" />                  
+                  </IconTabFilter>
+                  <IconTabFilter id="SkillsTab" text='Skills' key='Skills' >
+                    <Text text="{north>Country}" />                  
+                  </IconTabFilter>
+                </items>
+              </IconTabBar>       
+            
+              <List id='territoryList'
+                items="{
+                  path: 'Terr>/d/results'
+                }">
+                <headerToolbar>
+                  <Toolbar>
+                    <Title text="Territories" />
+                    <ToolbarSpacer />
+                  </Toolbar>
+                </headerToolbar>
+                <items>
+                  <StandardListItem 
+                    title="{Terr>TerritoryID} {Terr>TerritoryDescription}"
+                    icon="sap-icon://master-task-triangle"
+                  ></StandardListItem>
+                </items>                
+              </List>
+
+              <Panel items="{path: 'north>/Employees'}">
+                <!-- <Text text="Employee ID: {north>EmployeeID}" /> -->
+
+                <Table items="{path: 'north>Orders'}"
+                  visibleRowCount="5"
+                  selectionMode="multiToggle" >
+                <headerToolbar>
+                  <Toolbar>
+                    <Title text="Sales Orders" />
+                    <ToolbarSpacer />
+                  </Toolbar>
+                </headerToolbar>
+
+                <columns>
+                  <Column >
+                    <Text text='Employee ID' />
+                  </Column>
+                  <Column >
+                    <Text text='Order Number' />
+                  </Column>
+                  <Column >
+                    <Text text='Customer Number' />
+                  </Column>
+                  <Column >
+                    <Text text='ShipName' />
+                  </Column>                  
+                  <Column >
+                    <Text text='Ship City' />
+                  </Column>
+                  <Column >
+                    <Text text='Ship Country' />
+                  </Column>
+                  <Column >
+                    <Text text='Shipped Date' />
+                  </Column>
+                </columns>
+                <items>
+                  <ColumnListItem >
+                    <cells>
+                      <ObjectIdentifier
+                          title="{north>EmployeeID}"/>
+                      <Text text="{north>OrderID}"/>
+                      <Text text="{north>CustomerID}"/>
+                      <Text text="{north>ShipName}"/>                      
+                      <Text text="{north>ShipCity}"/>
+                      <Text text="{north>ShipCountry}"/>
+                      <Text text="{north>ShippedDate}"/>
+                    </cells>
+                  </ColumnListItem>
+
+                </items>
+              </Table>
+            </Panel>
+
+            </content>
+          </Panel>
+        </content>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>

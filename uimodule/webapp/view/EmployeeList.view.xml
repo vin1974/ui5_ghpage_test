@@ -1,0 +1,30 @@
+ <mvc:View controllerName="vin.prj.routingTest.controller.EmployeeList"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  <App id="EmployeeList" >
+    <pages>
+      <Page title="Employee List"
+        showNavButton="true"
+        navButtonPress=".onNavBack"
+        class="sapUiResponsiveContentPadding">
+        <content>
+          <!-- <Text text='hi' /> -->
+          <List id="employeeList" 
+              items="{north>/Employees}">
+              <items>
+                <StandardListItem 
+                  title="{north>FirstName} {north>LastName}" 
+                  iconDensityAware="true"
+                  iconInset="true"
+                  type="Navigation"
+                  press=".onListItemPressed"
+                  ></StandardListItem>
+              </items>
+
+        </List>
+        </content>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>

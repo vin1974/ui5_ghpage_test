@@ -3,5 +3,7 @@ sap.ui.define([
 ], function(Controller) {
   "use strict";
 
-  return Controller.extend("vin.prj.routingTest.controller.App", {});
+  return Controller.extend("vin.prj.routingTest.controller.App", {
+    
+  });
 });

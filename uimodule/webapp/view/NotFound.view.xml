@@ -1,0 +1,14 @@
+<mvc:View 
+    controllerName="vin.prj.routingTest.controller.NotFound"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <MessagePage 
+        title="404 Error"
+        text="Requested page is not found."
+        description="Page Not found"
+        showNavButton="true"
+        navButtonPress=".onNavBack"
+    ></MessagePage>
+    
+
+</mvc:View>
